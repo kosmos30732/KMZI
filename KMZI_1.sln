@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "KMZI_1", "KMZI_1\KMZI_1.pyproj", "{4F86AB92-630B-47FB-8EC8-13951FD02041}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F86AB92-630B-47FB-8EC8-13951FD02041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F86AB92-630B-47FB-8EC8-13951FD02041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {732DE7EA-0CF8-4801-8551-E17F7AF5FFDD}
+	EndGlobalSection
+EndGlobal
