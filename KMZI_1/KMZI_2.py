@@ -1,3 +1,5 @@
+import random
+
 def cp_encrypt(plain_text, key):
     l0 = plain_text[:8]
     r0 = plain_text[8:]
@@ -190,11 +192,72 @@ print("\nAnalize block S3:")
 ret_res=analiz_s3()
 print('\n'.join('\t'.join(map(str, row)) for row in ret_res))
 
+plain_text=[]
+cipher_text=[]
+key=[1,0,1,0,1,0,1,0,1,0,1,0]
+n=1000
+
+for i in range(n):
+    plain=[int(bit) for bit in bin(random.randrange(65535))[2:]]
+    plain=[0 for i in range(0, 16 - len(plain))] + plain
+    cipher=cp_encrypt(plain, key)
+    plain_text.append(plain)
+    cipher_text.append(cipher)
+
+xxx=[
+    [9,10,7,4,3],
+    [9,11,4,3],
+    [11,10,12,3],
+    [9,12,11,7,4],
+    [13,15,6],
+    [16,6,5,8],
+    [14,15,5,8],
+    [14,13,6],
+    [14,16,6,5,8],
+    [10,12,2,1],
+    [16,12,2,1],
+    [10,16,2,1],
+    [16,10,12,1],
+    [11,16,10,12,1]
+    ]
+yyy=[
+    [7,4,3],
+    [4,3],
+    [3],
+    [7,4],
+    [6],
+    [6,5,8],
+    [5,8],
+    [6],
+    [6,5,8],
+    [2,1],
+    [2,1],
+    [2,1],
+    [1],
+    [1]
+    ]
+
+for i in range(len(xxx)):
+    count=0
+    res=""
+    for j in range(n):
+        tmp=0
+        for k in xxx[i]:
+            tmp=tmp^plain_text[j][k-1]
+        for k in yyy[i]:
+            tmp=tmp^cipher_text[j][k-1]
+        if tmp==0:
+            count+=1
+    for k in xxx[i]:
+        res+="X"+str(k)+"+"
+    for k in yyy[i]:
+        res+="Y"+str(k)+"+"
+    res=res[:len(res)-1]
+    print(res+"\tCount text where = 0 is ",count)
 #plain=[0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0]
 #plain=[int(bit) for bit in input().split()]
 #key=[1,0,1,0,1,0,1,0,1,0,1,0]
 #res=cp_encrypt(plain,key)
-
 #print(res)
 #res=cp_encrypt(res,key)
 #print(res)
