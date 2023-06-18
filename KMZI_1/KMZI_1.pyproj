@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f86ab92-630b-47fb-8ec8-13951fd02041</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>KMZI_2.py</StartupFile>
+    <StartupFile>KMZI_3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,10 @@
   <ItemGroup>
     <Compile Include="KMZI_1.py" />
     <Compile Include="KMZI_2.py" />
+    <Compile Include="KMZI_3.py" />
+    <Compile Include="KMZI_4.py" />
+    <Compile Include="lab3.py" />
+    <Compile Include="TableIt.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
